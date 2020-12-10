@@ -1,0 +1,5 @@
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)?$ wating.php?testcode=$1&rolno=$2&na=$3 [L,QSA]
