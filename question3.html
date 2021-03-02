@@ -1,0 +1,37 @@
+<html>
+
+<body>
+<strong>Question 3</strong>
+<p>Suppose you have an array of 101 integers. This array is already sorted and all numbers in this array are consecutive. Each number only occurs once in the array except one number which occurs twice. Write a js code to find the repeated number.
+</p>
+<i>Answer :-</i>
+<p id="ans"></p>
+
+
+<script>
+var array = [0,1,2,3,4,5,6,7,7,8,9,10];
+if(array.length>12)
+{
+document.getElementById("ans").innerHTML = "Array is greater than 12 integer"
+}
+else{
+var i = 0;
+while(i < (array.length-1))
+{
+if(array[i]==array[i+1])
+{
+document.getElementById("ans").innerHTML ="Repeated number is : "+array[i];
+console.log("Repeated number is : "+array[i]);
+break;
+}
+else
+{
+i++;
+}
+}
+}
+</script>
+
+
+</body>
+</html>

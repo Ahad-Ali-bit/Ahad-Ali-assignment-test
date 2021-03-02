@@ -1,0 +1,32 @@
+<html>
+
+<body>
+<strong>Question 2</strong>
+<p>Find the maximum consecutive 1's in an array of 0's and 1's.</p>
+<i>Answer :-</i>
+<p id="ans"></p>
+
+
+<script>
+var array = [0,0,1,1,0,0,0,1,0,0,1,1,1,1,0,1,1,1,1,1,1,0,0];
+var count=0;
+var final_output=0;
+for(var i=0; i<array.length; i++)
+{
+if(array[i] == 1)
+{
+count +=1;
+}
+else
+{
+if(final_output < count){ final_output = count; }
+count=0;
+}
+}
+document.getElementById("ans").innerHTML = final_output;
+console.log(final_output);
+</script>
+
+
+</body>
+</html>
