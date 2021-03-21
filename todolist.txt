@@ -1,0 +1,32 @@
+import React,{useState} from 'react';
+import ReactDOM from 'react-dom';
+
+const Main = () =>{
+const[todo, setTodo]=useState("");
+const[items, setItems]=useState([]);
+
+const button_click = () =>{
+    setItems((oldarray) =>{
+       return [...oldarray,todo];
+    });
+    setTodo("");
+
+
+}
+
+  return (
+    <>
+    <div style={{"margin":"auto","width":"50%","border": "3px solid green","padding": "10px"}}>
+    <p style={{"text-align":"center"}}>ToDo List App</p>
+    <hr/>
+    <input type="text" onChange={(event)=>setTodo(event.target.value)} value={todo}/>
+    <button onClick={button_click}>Add</button>
+    <p>{todo}</p>
+    <p>{items.map((allitems,index)=>{return <p>{index+1}) {allitems}</p>})
+    }</p>
+    </div> 
+    </>
+  );
+}
+
+export default Main;
